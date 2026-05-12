@@ -28,4 +28,4 @@ frontend/build/
 .DS_Store
 
 # Data and Models
-*.csv
+# *.csv (Commented out to allow tracking of myscheme_cleaned.csv)
