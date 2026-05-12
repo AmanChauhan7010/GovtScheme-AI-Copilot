@@ -50,5 +50,13 @@ def clear_memory(request: ClearMemoryRequest):
     llm_client.clear_session(request.session_id)
     return {"status": "success", "message": "Memory cleared."}
 
+@app.get("/api/tickets")
+def get_tickets():
+    """
+    Returns all logged tickets.
+    """
+    tickets = ticket_system.get_all_tickets()
+    return {"status": "success", "total": len(tickets), "tickets": tickets}
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

@@ -29,3 +29,19 @@ def create_ticket(query: str) -> str:
     conn.commit()
     conn.close()
     return ticket_id
+
+def get_all_tickets():
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute('SELECT * FROM tickets ORDER BY timestamp DESC')
+    rows = c.fetchall()
+    conn.close()
+    tickets = []
+    for row in rows:
+        tickets.append({
+            "id": row[0],
+            "query": row[1],
+            "timestamp": row[2],
+            "status": row[3]
+        })
+    return tickets
