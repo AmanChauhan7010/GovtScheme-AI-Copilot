@@ -28,4 +28,5 @@ frontend/build/
 .DS_Store
 
 # Data and Models
-# *.csv (Commented out to allow tracking of myscheme_cleaned.csv)
+*.csv
+!Dataset/myscheme_cleaned.csv
