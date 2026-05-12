@@ -4,6 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
 from llm_client import llm_client
+import ticket_system
+
+# Initialize the ticket database
+ticket_system.init_db()
 
 app = FastAPI(title="GovtScheme AI Copilot API")
 

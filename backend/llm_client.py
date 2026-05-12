@@ -85,7 +85,9 @@ class LLMClient:
         # 3. Handle low-confidence/no-context fallback
         # If retrieved is empty, it means all distances were > threshold
         if not retrieved:
-            fallback_msg = "Sorry, I could not find reliable information related to your query."
+            import ticket_system
+            ticket_id = ticket_system.create_ticket(query)
+            fallback_msg = f"Sorry, I could not find reliable information related to your query. A support ticket (**{ticket_id}**) has been automatically generated for our team to add this information."
             self.add_message(session_id, "assistant", fallback_msg)
             yield fallback_msg
             return
