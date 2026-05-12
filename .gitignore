@@ -28,6 +28,4 @@ frontend/build/
 .DS_Store
 
 # Data and Models
-backend/faiss_index/
 *.csv
-*.pkl
