@@ -6,7 +6,7 @@ import pickle
 import os
 
 # Paths
-DATASET_PATH = "../../Dataset/myscheme_cleaned.csv"
+DATASET_PATH = "../Dataset/myscheme_cleaned.csv"
 INDEX_DIR = "./faiss_index"
 INDEX_FILE = os.path.join(INDEX_DIR, "schemes.index")
 METADATA_FILE = os.path.join(INDEX_DIR, "metadata.pkl")
