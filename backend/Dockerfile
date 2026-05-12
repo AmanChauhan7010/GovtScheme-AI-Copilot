@@ -11,5 +11,5 @@ RUN pip install gunicorn
 
 COPY . .
 
-# Run the application with uvicorn workers
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
+# Run the application using the PORT environment variable (defaults to 7860 for Hugging Face)
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-7860}
