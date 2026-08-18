@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/FastAPI-0.104-009688?style=for-the-badge&logo=fastapi" alt="FastAPI"/>
   <img src="https://img.shields.io/badge/Groq-LPU_Inference-f35525?style=for-the-badge" alt="Groq"/>
   <br>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
   <h1>🏛️ GovtScheme AI Copilot</h1>
   <p><b>An Enterprise-Grade Retrieval-Augmented Generation (RAG) Framework for Indian E-Governance</b></p>
 </div>
